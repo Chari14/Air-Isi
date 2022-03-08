@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1ff17ccc-f3a0-4c0b-9164-c6486df0b770">
+	<property name="ireport.zoom" value="1.100000000000002"/>
+	<property name="ireport.x" value="117"/>
+	<property name="ireport.y" value="240"/>
+	<parameter name="id_donasi" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     *,
+     data_donasi.`id_donasi` AS data_donasi_id_donasi,
+     data_donasi.`nama` AS data_donasi_nama,
+     data_donasi.`no_hp` AS data_donasi_no_hp,
+     data_donasi.`jenis_kelamin` AS data_donasi_jenis_kelamin,
+     data_donasi.`alamat` AS data_donasi_alamat,
+     data_donasi.`status_donasi` AS data_donasi_status_donasi,
+     data_donasi.`tanggal_donasi` AS data_donasi_tanggal_donasi,
+     data_donasi.`jumlah_donasi` AS data_donasi_jumlah_donasi
+FROM
+     `data_donasi` data_donasi
+WHERE
+     id_donasi=$P{id_donasi};]]>
+	</queryString>
+	<field name="id_donasi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_hp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenis_kelamin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status_donasi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_donasi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jumlah_donasi" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="data_donasi_id_donasi" class="java.lang.String"/>
+	<field name="data_donasi_nama" class="java.lang.String"/>
+	<field name="data_donasi_no_hp" class="java.lang.String"/>
+	<field name="data_donasi_jenis_kelamin" class="java.lang.String"/>
+	<field name="data_donasi_alamat" class="java.lang.String"/>
+	<field name="data_donasi_status_donasi" class="java.lang.String"/>
+	<field name="data_donasi_tanggal_donasi" class="java.lang.String"/>
+	<field name="data_donasi_jumlah_donasi" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="110" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement uuid="e2628807-49c2-4b2c-8ed9-81903b5a1639" x="289" y="17" width="248" height="65" backcolor="#0099FF"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="e2b508af-d377-4120-8a0a-facc1bea5dab" x="6" y="20" width="124" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Status Donasi		:]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="cc84509c-ea6a-4e7c-a03e-fe34fc119739" x="613" y="-2" width="134" height="101"/>
+				<imageExpression><![CDATA["D:\\Program Skripsi Hari Prasetiyo\\Hari\\Isi_Ulang_Air\\src\\Report\\Logo Naafie.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="6f42c6c4-2e51-4c3c-a051-c7aaf6cfbc9f" x="6" y="0" width="124" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Hari / Tanggal 		:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="01380a86-54a8-4458-8984-415be80f93ab" x="130" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tanggal_donasi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4e1a46c8-07e6-454c-a56d-8725ec49ee68" x="130" y="17" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{status_donasi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="327c672b-fbf6-4b69-bd57-db7a55dc9e0d" x="298" y="62" width="235" height="20" forecolor="#FFFF33"/>
+				<textElement textAlignment="Center">
+					<font fontName="Bell MT" size="12"/>
+				</textElement>
+				<text><![CDATA[JL.Lewinanggung Raya No.18 - Kota Bekasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f3f887fc-0418-4379-bddb-840aee975ce7" x="364" y="40" width="105" height="22" forecolor="#FFFF33"/>
+				<textElement textAlignment="Center">
+					<font fontName="Book Antiqua" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Naafie]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="97450020-9967-4680-a3aa-da674f5de8bc" x="322" y="20" width="184" height="20" forecolor="#FFFF00"/>
+				<textElement textAlignment="Center">
+					<font fontName="Book Antiqua" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nota Donasi Air Isi Ulang ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="132" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="51cace5b-0d13-4db7-9496-a44703c14d49" x="0" y="105" width="91" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Alamat	  	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="51cace5b-0d13-4db7-9496-a44703c14d49" x="0" y="85" width="91" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Jenis Klamin	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="10bfdc13-3e6c-4bf2-a310-768e6697fc58" x="0" y="65" width="91" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Telepon		:	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="43194a3f-02fc-4dcb-86bc-18570b397cbd" x="0" y="24" width="91" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[ID Donasi	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="43194a3f-02fc-4dcb-86bc-18570b397cbd" x="0" y="45" width="91" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Nama 		:	]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="32d7be63-dc13-40cf-8c11-b8511a1e6a2c" mode="Opaque" x="0" y="0" width="308" height="24" forecolor="#0066FF" backcolor="#6699FF"/>
+				<staticText>
+					<reportElement uuid="62267757-4be0-4415-96bd-80f322cc449a" x="24" y="4" width="123" height="20" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[DATA DONASI]]></text>
+				</staticText>
+			</frame>
+			<textField>
+				<reportElement uuid="f92e3e59-1522-4d08-9b5a-279d7b2a7e08" x="91" y="45" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d78041e2-635a-438d-a511-e1a3d25efa75" x="91" y="65" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{no_hp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b1b9d3d2-cd1d-4407-b87b-905039a22eb2" x="91" y="85" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{jenis_kelamin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c92ae997-4366-4afb-a2e6-6012636a7ff4" x="90" y="105" width="101" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9e759190-308b-4683-b316-b9a68361aff3" x="91" y="24" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{id_donasi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="43194a3f-02fc-4dcb-86bc-18570b397cbd" x="525" y="105" width="88" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Jumlah Donasi	:]]></text>
+			</staticText>
+			<textField pattern="¤ #,##0" isBlankWhenNull="true">
+				<reportElement uuid="d5bdfe7e-24f6-46b7-9bea-bfe5419e9ebd" x="613" y="105" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{jumlah_donasi}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement uuid="32d7be63-dc13-40cf-8c11-b8511a1e6a2c" mode="Opaque" x="494" y="0" width="308" height="24" forecolor="#0066FF" backcolor="#6699FF"/>
+				<staticText>
+					<reportElement uuid="62267757-4be0-4415-96bd-80f322cc449a" x="24" y="4" width="160" height="20" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[DATA JUMLAH DONASI]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="96" splitType="Stretch">
+			<image>
+				<reportElement uuid="a3caf4c0-82e5-4b90-9968-5ce51777a01f" x="24" y="26" width="111" height="32"/>
+				<imageExpression><![CDATA["D:\\Program Skripsi Hari Prasetiyo\\Hari\\Isi_Ulang_Air\\src\\Report\\Bank Muamalat Logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="adcf9cb6-beb7-4d04-82a9-a664cf7e70ae" x="289" y="54" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[089503410152]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="14b8c98b-9603-4257-bec4-127cbf030016" x="289" y="34" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No HP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="14b8c98b-9603-4257-bec4-127cbf030016" x="30" y="59" width="100" height="15"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[a.n Naafie]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="32d7be63-dc13-40cf-8c11-b8511a1e6a2c" mode="Opaque" x="0" y="2" width="398" height="24" forecolor="#0066FF" backcolor="#6699FF"/>
+				<staticText>
+					<reportElement uuid="62267757-4be0-4415-96bd-80f322cc449a" x="283" y="4" width="100" height="20" forecolor="#FFFFFF"/>
+					<textElement>
+						<font fontName="Gill Sans MT" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[LAYANAN INFO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="62267757-4be0-4415-96bd-80f322cc449a" x="24" y="4" width="133" height="20" forecolor="#FFFFFF"/>
+					<textElement>
+						<font fontName="Gill Sans MT" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[LAYANAN TRASFER]]></text>
+				</staticText>
+			</frame>
+			<line>
+				<reportElement uuid="b15f4993-595d-42c3-a2fb-1274878e532c" x="494" y="6" width="308" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="204" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="979d0996-c58c-46cf-a782-88a2536c8c32" x="44" y="46" width="147" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[CV. Bangun Berkah Mandiri]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="32d7be63-dc13-40cf-8c11-b8511a1e6a2c" mode="Opaque" x="0" y="7" width="440" height="16" forecolor="#0066FF" backcolor="#6699FF"/>
+			</frame>
+			<staticText>
+				<reportElement uuid="040ef0e0-6580-4711-8c2c-7971f9d72fa0" x="72" y="61" width="100" height="20"/>
+				<textElement>
+					<font fontName="Gill Sans MT" size="12"/>
+				</textElement>
+				<text><![CDATA[Air Isi Ulang Naafie]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6456479c-f3de-44e6-8b51-ff23a0620f5f" x="283" y="31" width="39" height="15"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Bekasi,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e66377b2-727b-457f-b636-d4080ed4cd47" x="279" y="135" width="161" height="15"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[........................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e66377b2-727b-457f-b636-d4080ed4cd47" x="44" y="135" width="161" height="15"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[........................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="979d0996-c58c-46cf-a782-88a2536c8c32" x="278" y="76" width="147" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Penerima]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="6ac69594-ce66-4f48-846d-eee83e8a04a4" positionType="FixRelativeToBottom" x="322" y="31" width="162" height="15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE dd-MMMM-yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement uuid="32d7be63-dc13-40cf-8c11-b8511a1e6a2c" mode="Opaque" x="518" y="7" width="283" height="16" forecolor="#0066FF" backcolor="#6699FF"/>
+			</frame>
+			<staticText>
+				<reportElement uuid="979d0996-c58c-46cf-a782-88a2536c8c32" x="44" y="76" width="147" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Admin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5d533111-824b-4802-a3d7-35cf06e45f1d" x="44" y="150" width="161" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rio Hermawan]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="32d7be63-dc13-40cf-8c11-b8511a1e6a2c" mode="Opaque" x="0" y="176" width="802" height="24" forecolor="#0066FF" backcolor="#FFCC00"/>
+			</frame>
+			<textField>
+				<reportElement uuid="f92e3e59-1522-4d08-9b5a-279d7b2a7e08" x="298" y="145" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="26" splitType="Stretch"/>
+	</summary>
+</jasperReport>
